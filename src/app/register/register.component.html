@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+</head>
+
+<body>
+
+  <div class="register-wrapper">
+    <app-header></app-header>
+    <div class="title-container">
+      <h1>REJOIGNEZ-NOUS !</h1>
+    </div>
+    <div class="main-container">
+
+      <div class="main-content-container">
+        <div class="register-container">
+          <div class="register-header">
+            <p>CRÉER UN COMPTE</p>
+          </div>
+          <div class="register-body">
+            <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+              <div class="form-body">
+                <div class="first-half-form">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <input type="text" class="form-control" placeholder="UserName" formControlName="UserName" />
+                    </div>
+                    <div class="col-6">
+                      <input type="text" class="form-control" placeholder="FullName" formControlName="FullName" />
+                    </div>
+                    <div class="col-6">
+                      <div formGroupName="Emails">
+
+                        <input type="email" class="form-control" placeholder="Email" formControlName="Email" />
+                      </div>
+                    </div>
+
+                    <div class="col-6">
+                      <input type="email" class="form-control" placeholder="Confirmer l’adresse Email"
+                        formControlName="ConfirmEmail" />
+                    </div>
+
+
+                    <div class="col-6">
+                      <div formGroupName="Passwords">
+
+                        <input type="password" class="form-control" placeholder="Mot de passe"
+                          formControlName="Password" />
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <input type="password" class="form-control" placeholder="Confirmer le mot de passe"
+                        formControlName="ConfirmPassword" />
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" name="submit" id="submit" class="btn btn-primary" value="Inscription" />
+              </div>
+            </form>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
+  </div>
+
+</body>
+
+</html>

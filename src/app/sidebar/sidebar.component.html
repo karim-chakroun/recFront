@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+  <button mat-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+  </button>
+
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Rechercher</button>
+  </form>
+
+
+</mat-toolbar>
+
+<mat-sidenav-container fxLayout="column">
+  <mat-sidenav class="mat-elevation-z8" #drawer mode="side" opened>
+      <mat-divider></mat-divider>
+      <mat-accordion>
+          <mat-expansion-panel [expanded]="isDashboard()">
+              <mat-expansion-panel-header >
+                  <mat-panel-title >
+                      <mat-icon>home</mat-icon>
+                      <span>Accueil</span>
+                  </mat-panel-title>
+
+              </mat-expansion-panel-header>
+
+
+          </mat-expansion-panel>
+      </mat-accordion>
+      <button [routerLink]="['/Offres']" mat-button class="menu-button">
+          <mat-icon>border_color</mat-icon>
+          <span>Offres</span>
+      </button>
+      <button [routerLink]="['/Candidatures']" mat-button class="menu-button">
+          <mat-icon>storage</mat-icon>
+          <span>Candidatures</span>
+      </button>
+      <button [routerLink]="['/TestTechniques']" mat-button class="menu-button">
+          <mat-icon>event</mat-icon>
+          <span>Tests Techniques</span>
+      </button>
+      <button [routerLink]="['/EntretienRHs']" mat-button class="menu-button">
+        <mat-icon>insert_invitation</mat-icon>
+        <span>Entretiens RH</span>
+    </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button class="menu-button">
+          <mat-icon>settings</mat-icon>
+          <span>Paramétres</span>
+      </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+          <router-outlet></router-outlet>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

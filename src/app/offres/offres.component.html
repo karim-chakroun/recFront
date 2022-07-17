@@ -1,0 +1,50 @@
+
+  <div class="buttons-container">
+    <button type="button" class="btn btn-primary float-end m-2" routerLink="/AjoutOffre">
+      Ajouter
+    </button>
+
+<!-- Button trigger modal -->
+    <button type="button" class="btn btn-secondary float-end m-2">
+      Filtrer
+    </button>
+  </div>
+    <div class="demandeCandidatWrapper">
+
+      <span class="titel">Liste des offres</span>
+      <div class="table table-sm" style="width: 700;">
+
+        <table>
+          <th class="fs-6">Titre du poste</th>
+          <th class="fs-6">Département</th>
+          <th class="fs-6">Pays</th>
+          <th class="fs-6">Région</th>
+
+          <th class="fs-6">Diplome démandé</th>
+          <th class="fs-6">Expérience démandée</th>
+          <th class="fs-6">Compétences Techniques démandées</th>
+          <th class="fs-6">Date de début</th>
+          <th class="fs-6">Salaire</th>
+          <th class="fs-6">Type de contrat</th>
+          <tr *ngFor="let offre of offres">
+            <td>{{offre.nomOffre}}</td>
+            <td>{{offre.departement}}</td>
+            <td>{{offre.pays}}</td>
+            <td>{{offre.region}}</td>
+
+            <td>{{offre.diplome_demande}}</td>
+            <td>{{offre.experience_demandee}}</td>
+            <td>{{offre.competences_techniques}}</td>
+            <td>{{offre.date_debut}}</td>
+            <td>{{offre.salaire}}</td>
+            <td>{{offre.type_contrat}}</td>
+            <td><button [routerLink]="['/FichePoste',offre.offreID]">voir plus</button></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+
+
+

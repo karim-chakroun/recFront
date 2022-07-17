@@ -1,0 +1,150 @@
+    <div class="espaceCandidatWrapper">
+      <div class="master-container">
+        <div class="titel-container">
+          <h3>Ajouter une offre</h3>
+        </div>
+
+        <div class="forms-container row">
+
+          <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+          <div class="container">
+            <div class="row g-2">
+              <div class="col-6">
+
+                  <input type="text" class="form-control" placeholder="Titre du poste" formControlName="nomOffre" />
+
+              </div>
+
+              <div class="col-6">
+
+                  <select class="form-control" formControlName="departement" placeholder="Departement">
+                    <option value="Departement" disabled selected style="display: none">
+                    Département
+                    </option>
+                    <option>Développement Back End</option>
+                    <option>Développement Front End</option>
+                    <option>Développement mobile</option>
+                    <option>Ressources humaines</option>
+                    <option>DevOps</option>
+                    <option>Marketing</option>
+                    <option>Design</option>
+                    <option>Finance</option>
+                    <option>Data</option>
+                    <option>Test et Validation</option>
+                  </select>
+
+              </div>
+
+
+                <div class="col-6">
+
+                    <select class="form-control" formControlName="pays">
+                      <option value="" disabled selected style="display: none">
+                      Pays
+                      </option>
+                      <option>Tunisie</option>
+                      <option>France</option>
+                    </select>
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <select class="form-control" formControlName="region">
+                      <option value="" disabled selected style="display: none">
+                      Région
+                      </option>
+                      <option>Tunis</option>
+                      <option>Tozeur</option>
+                    </select>
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <select class="form-control" formControlName="diplome_demande">
+                      <option value="" disabled selected style="display: none">
+                      Diplome démandé
+                      </option>
+                      <option>Ingénieur</option>
+                      <option>Technicien</option>
+                    </select>
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Date de début"
+                      formControlName="date_debut"
+                    />
+
+                </div>
+
+
+
+
+              <div class="col-6">
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Expérience démandée"
+                    formControlName="experience_demandee"
+                  />
+
+              </div>
+
+
+                <div class="col-6">
+
+                    <input type="text" class="form-control" placeholder="Compétences techniques démandées" formControlName="competences_techniques" />
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <input type="text" class="form-control" placeholder="Qualités interpersonnelles démandées" formControlName="qualites_interpersonnelles"/>
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <select class="form-control" formControlName="type_contrat">
+                      <option value="" disabled selected style="display: none">
+                        Type de contrat
+                      </option>
+                      <option>CDI</option>
+                      <option>CDD</option>
+                    </select>
+
+                </div>
+
+
+                <div class="col-6">
+
+                    <input type="text" class="form-control" placeholder="Salaire" formControlName="salaire"/>
+
+                </div>
+
+            </div>
+
+          </div>
+          <div class="buttons-container">
+            <button class="btn btn-primary next">Enregistrer</button>
+            <button class="btn btn-primary cancel">Annuler</button>
+          </div>
+        </form>
+        </div>
+
+      </div>
+
+
+    </div>

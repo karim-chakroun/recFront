@@ -1,0 +1,43 @@
+<div class="buttons-container">
+  <button type="button" class="btn btn-secondary float-end m-2" >
+    Filtrer
+  </button>
+</div>
+    <div class="demandeCandidatWrapper">
+      <span class="titel">Gestion des candidatures</span>
+      <div class="table table-sm">
+        <table>
+          <th class="fs-6">Titre du poste</th>
+          <th class="fs-6">FullName du candidat</th>
+          <th class="fs-6">Email candidat</th>
+          <th class="fs-6">Date de postulation</th>
+          <th class="fs-6">Curriculum Vitae</th>
+          <th class="fs-6">Score</th>
+          <th class="fs-6">Années d'expérience demandé</th>
+          <th class="fs-6">Années d'expérience du candidat</th>
+          <th class="fs-6">Etat</th>
+          <th class="fs-6">Action</th>
+          <tr *ngFor="let candidature of candidatures">
+            <td>{{candidature.correspondance.nomOffre}}</td>
+            <td>{{candidature.candidat.fullName}}</td>
+            <td>{{candidature.candidat.email}}</td>
+            <td>{{candidature.date_postulation}}</td>
+            <td>{{candidature.curriculum_Vitae}}
+              <app-download [fileUrl]="candidature.curriculum_Vitae"></app-download>
+            </td>
+            <td>{{candidature.score}}</td>
+            <td>{{candidature.correspondance.experience_demandee}}</td>
+            <td>experience_candidat</td>
+            <td><span class="statue">{{candidature.etat}}</span></td>
+            <td>
+              <i class="fas fa-eye" style="color: #007abe"></i>
+              <i class="fas fa-pen-to-square"></i>
+              <i class="fas fa-file"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+

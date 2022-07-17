@@ -1,0 +1,66 @@
+
+    <div class="espaceCandidatWrapper">
+
+
+      <div class="master-container">
+        <div class="titel-container">
+          <h3>Planifier un test technique</h3>
+        </div>
+        <div class="forms-container row">
+
+          <form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+          <div class="container">
+            <div class="row g-2">
+              <div class="col-6">
+
+                  <input type="text" class="form-control" placeholder="Adresse email du candidat" formControlName="destination" />
+
+              </div>
+              <div class="col-6">
+
+                  <input
+                    type="date"
+                    class="form-control"
+                    placeholder="Date de dépot"
+                    formControlName="date_depot"
+                  />
+
+              </div>
+
+
+              <div class="col-6">
+
+                  <input type="text" class="form-control" placeholder="Lien du test" formControlName="lien_test" />
+
+              </div>
+
+              <div class="col-6">
+
+                      <select class="form-control" formControlName="duree">
+                        <option value="" disabled selected style="display: none">
+                          Durée
+                        </option>
+
+                        <option>15 min</option>
+                        <option>20 min</option>
+                        <option>30 min</option>
+                        <option>40 min</option>
+
+                      </select>
+
+              </div>
+
+            </div>
+          <div class="buttons-container">
+            <button class="btn btn-primary next">Valider</button>
+            <button class="btn btn-primary cancel">Annuler</button>
+          </div>
+
+        </div>
+          </form>
+      </div>
+
+    </div>
+
+
+
