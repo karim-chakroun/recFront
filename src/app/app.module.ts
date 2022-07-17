@@ -44,6 +44,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UploadComponent } from './upload/upload.component';
 import { DownloadComponent } from './download/download.component';
 import { AjoutCandidatureComponent } from './ajout-candidature/ajout-candidature.component';
+import { NosOffresComponent } from './nos-offres/nos-offres.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { AjoutCandidatureComponent } from './ajout-candidature/ajout-candidature
     UploadComponent,
     DownloadComponent,
     AjoutCandidatureComponent,
+    NosOffresComponent,
 
   ],
   imports: [
